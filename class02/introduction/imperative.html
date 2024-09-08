@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Approche imperative - Exemple avec l'API DOM</title>
+    <style>
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<ul id="myList">
+    <li>Premier Élément</li>
+    <li>Deuxième Élément</li>
+    <li>Troisième Élément</li>
+</ul>
+
+<button onclick="ajouterNouvelElement()">Ajouter un nouvel élément</button>
+
+<script>
+    function ajouterNouvelElement() {
+        // Méthode impérative avec l'API DOM
+        const liste = document.getElementById('myList');
+        const nouvelElement = document.createElement('li');
+        nouvelElement.textContent = 'Nouvel Élément';
+        liste.appendChild(nouvelElement);
+    }
+</script>
+
+</body>
+</html>
