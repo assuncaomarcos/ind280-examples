@@ -32,7 +32,7 @@ Ce guide vous expliquera comment créer un projet React en utilisant Vite, un ou
 1. **Exécutez la commande suivante pour créer un projet Vite avec le modèle React :**
 
    ```bash
-   npm create vite@latest mon-projet-react --template react
+   npm create vite@latest mon-projet-react -- --template react
    ```
 
    - Cette commande initialise un nouveau projet React utilisant Vite dans un dossier nommé `mon-projet-react`.
