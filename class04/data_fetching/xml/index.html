@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example d'utilisation de XMLHttpRequest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+<h3>Exemple XMLHttpRequest</h3>
+
+<div class="row">
+    <div class="col s6 s12">
+        <div class="card blue-grey darken-1">
+            <div id="content" class="card-content white-text">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <button id="button" type="button" class="btn">Charger le contenu</button>
+</div>
+
+<script>
+     function loadContent() {
+        let xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+            if (this.status === 200) {
+                let data = JSON.parse(this.responseText);
+                let contentDiv = document.getElementById('content');
+                contentDiv.innerHTML = '';
+                let userId = document.createElement('p');
+                userId.textContent = `Utilisateur ID: ${data.id}`;
+                let userName = document.createElement('p');
+                userName.textContent = `Nom: ${data.name}`;
+                let userEmail = document.createElement('p');
+                userEmail.textContent = `Email: ${data.email}`;
+                contentDiv.appendChild(userId);
+                contentDiv.appendChild(userName);
+                contentDiv.appendChild(userEmail);
+            } else {
+                document.getElementById("content").innerHTML = "Erreur lors du chargement des données";
+            }
+        };
+        xhr.onerror = function() {
+            document.getElementById("content").innerHTML = "Erreur réseau.";
+        };
+        // Utilisation de l'API JSONPlaceholder pour obtenir des informations utilisateur
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/users/1", true);
+        xhr.send();
+    }
+
+    const button = document.getElementById("button");
+    button.addEventListener('click', loadContent);
+</script>
+</body>
+</html>
