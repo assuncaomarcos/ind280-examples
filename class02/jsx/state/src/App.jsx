@@ -2,7 +2,7 @@ import "./styles.css";
 import React from "react";
 
 export default function App() {
-    const [name, setName] = React.useState("Marcos");
+    consst [name, setName] = React.useState("Marcos");
     const [age, setAge] = React.useState(18);
 
     return (
