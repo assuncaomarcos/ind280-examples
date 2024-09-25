@@ -1,5 +1,14 @@
 import React, {useState} from 'react';
-import {Text, View, Button, TextInput, FlatList, StyleSheet} from 'react-native';
+import {
+  Text,
+  View,
+  Button,
+  TextInput,
+  FlatList,
+  StyleSheet,
+  Platform,
+  StatusBar
+} from 'react-native';
 
 export default function App() {
   const [items, setItems] = useState([]);
@@ -45,6 +54,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    ...Platform.select({
+      ios: {paddingTop: 20},
+      android: {paddingTop: StatusBar.currentHeight},
+    })
   },
   input: {
     height: 40,
@@ -67,7 +80,7 @@ const styles = StyleSheet.create({
   message: {
     fontSize: 16,
     marginBottom: 20,
-    marginTop: 20,
+    marginTop: 10,
     color: '#1f455b',
   },
 });
