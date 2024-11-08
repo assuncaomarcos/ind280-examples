@@ -1,5 +1,5 @@
 import {Text, View, Button} from 'react-native';
-import React, {useState, useRef} from 'react';
+import {useState, useRef} from 'react';
 import MapView, {Marker, Callout} from 'react-native-maps';
 import styles from './styles';
 

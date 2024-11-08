@@ -1,0 +1,21 @@
+{
+  "name": "express-mock-server",
+  "version": "1.0.0",
+  "description": "Exemple d'API REST avec Express",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Marcos Dias de Assuncao",
+  "license": "MIT",
+  "dependencies": {
+    "@faker-js/faker": "^9.2.0",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

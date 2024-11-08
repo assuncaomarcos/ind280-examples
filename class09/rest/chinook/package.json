@@ -1,0 +1,21 @@
+{
+  "name": "chinook",
+  "version": "1.0.0",
+  "description": "Exemple d'API REST avec Express",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Marcos Dias de Assuncao",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
