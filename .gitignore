@@ -134,3 +134,6 @@ dist
 **/exercises/
 
 temp
+
+class10/data
+package-lock.json
