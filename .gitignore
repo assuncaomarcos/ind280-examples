@@ -135,6 +135,6 @@ dist
 
 temp
 
-class10/data
-class11/data
+10_mongo_db/data
+11_authentication/data
 package-lock.json
