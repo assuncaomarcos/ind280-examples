@@ -1,5 +1,5 @@
 const CONFIG = {
-  API_BASE_URL: 'http://192.168.2.24:3000',
+  API_BASE_URL: 'http://10.160.169.164:3000',
 };
 
 export default CONFIG;
